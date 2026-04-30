@@ -1,45 +1,49 @@
 ---
-title: Homepage example
-description: This is a homapage example for a Canopy IIIF project template.
-image: https://iiif.dc.library.northwestern.edu/iiif/3/138a94b0-175a-4152-98c7-df58661ce7d5/950,520,7100,4740/!1200,630/0/default.jpg
+title: World War II Service Maps
+description: Hand-drawn and printed maps created by American service members to document the routes, operations, and campaigns of their units across Europe and the Pacific.
+image: https://api-pre.library.tamu.edu/iiif/2/aHR0cHM6Ly9hcGktcHJlLmxpYnJhcnkudGFtdS5lZHUvZmNyZXBvL3Jlc3QvYmF0Y2gtc2VydmljZS1tYXBzLXRlc3RzX29iamVjdHMvMjMvcGFnZXMvcGFnZV8wL2ZpbGVzL3NlcnZpY2VfbWFwc18wMDIyXzAwMDEuanAy/full/!1600,1600/0/default.jpg
 ---
 
 <Interstitials.Hero
-  headline="Use this Canopy IIIF template to create a new digital project"
-  description="This starter is yours to configure, add context to, and publish a collection that fits your project."
+  headline="World War II Service Maps"
+  description="Hand-drawn and printed maps created by American service members to document the routes, operations, and campaigns of their units across Europe and the Pacific."
   background="theme"
   random={true}
   links={[
     {
-      href: "/about/get-started",
-      title: "Get Started",
+      href: "/search",
+      title: "Browse the Collection",
       type: "primary",
-    },
-    {
-      href: "https://canopy-iiif.github.io/app/docs/",
-      title: "Read documentation",
-      type: "secondary",
-    },
+    }
   ]}
 />
 
 <Container>
 
-## Getting started
+## About the Collection
 
-Canopy IIIF is an open-source static site generator designed for IIIF collections. This template is ready for your collection, context, and publishing.
+The Texas A&M University Libraries holds over 120 service maps produced by American military units during World War II.
+These maps — many drawn by hand, others printed for official use — trace the paths of infantry divisions, armored units,
+engineer battalions, and corps across the battlefields of Western Europe, Italy, and the Pacific. Together they form an
+intimate cartographic record of the war: where units landed, where they fought, and the routes they followed from the
+beaches of Normandy to the Rhine and beyond.
 
-### Point to your collection
+Unlike official military maps made for operational planning, service maps were typically created after the fact as
+commemorative or documentary records. Soldiers and officers drew on their own memories and unit records to chart the
+campaigns they had lived through — marking command posts, river crossings, major engagements, and the towns where they
+stopped. The result is a collection that is at once historically precise and deeply personal.
 
-- Open `canopy.yml` and set `collection` to the IIIF Collection you want to feature.
-- Review `metadata` and `featured` entries—adjust them to suit the facets and works you want to highlight.
+### What You Will Find
 
-### Tune layouts and pages
+The collection spans theaters and unit types:
 
-- Customize `content/index.mdx`, `content/about/`, and add new folders under `content/` for exhibits or guides.
-- Modify `content/works/_layout.mdx` to control how individual manifests render.
-- Update `content/_app.mdx` to adjust site-wide structure.
-- Browse the component catalog and usage patterns in the docs to extend the narrative beyond default manifests.
+- **Western Europe** — Routes of infantry divisions, armored divisions, and engineer groups from the D-Day landings through Germany's surrender, including maps for the 13th Armored Division, the 29th Infantry Division, the 36th Infantry Division, and dozens of corps and battalion-level units.
+- **Italy** — Campaign maps for units that fought up the Italian peninsula, including the IV Corps and the 111th Engineer Combat Battalion.
+- **Pacific** — A smaller but significant set of maps documenting operations in the Pacific theater, including naval logs and island campaign records.
+
+### Explore the Maps
+
+Use the search and browse tools to find maps by unit name, theater, or campaign. Each item opens in a full-screen viewer with zoomable detail, allowing you to trace routes at the scale of individual roads and river crossings.
 
 <RelatedItems top={3} />
 

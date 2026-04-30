@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, readdirSync, statSync } from 'fs';
+import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from 'fs';
 import { join, extname } from 'path';
 
 const BASE_PATH = process.env.CANOPY_BASE_PATH || '';
@@ -8,6 +8,9 @@ const BASE_PATH = process.env.CANOPY_BASE_PATH || '';
 
 if (BASE_PATH) {
   const jsFile = join(process.cwd(), 'site', 'scripts', 'canopy-custom-components.js');
+  if (!existsSync(jsFile)) {
+    console.log('[patch] canopy-custom-components.js not found — skipping JS path patch.');
+  } else {
   let src = readFileSync(jsFile, 'utf8');
 
   const jsReplacements = [
@@ -25,6 +28,7 @@ if (BASE_PATH) {
   }
   writeFileSync(jsFile, src);
   console.log(`[patch] Patched ${jsCount} hardcoded path(s) in canopy-custom-components.js with base path "${BASE_PATH}".`);
+  } // end existsSync else
 } else {
   console.log('[patch] No CANOPY_BASE_PATH set — skipping JS path patch (dev mode).');
 }

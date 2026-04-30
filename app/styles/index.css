@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "@canopy-iiif/app/ui/styles/index.css";
-@import "./custom.css";
+@import "./_custom.css";
 
 @layer properties {
   :root,
@@ -37,7 +37,7 @@
   h4,
   .canopy-logo {
     font-family: var(--font-serif);
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: -0.025em;
   }
 }

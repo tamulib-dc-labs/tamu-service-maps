@@ -5,8 +5,8 @@
   "private": true,
   "main": "app/scripts/canopy-build.mjs",
   "scripts": {
-    "build": "tsx app/scripts/canopy-build.mts",
-    "dev": "tsx app/scripts/canopy-build.mts"
+    "build": "CANOPY_BASE_PATH=/tamu-service-maps tsx app/scripts/canopy-build.mts && CANOPY_BASE_PATH=/tamu-service-maps node app/scripts/patch-base-path.mjs",
+    "dev": "DEV_ONCE=1 tsx app/scripts/canopy-build.mts && node app/scripts/patch-base-path.mjs && tsx app/scripts/canopy-build.mts"
   },
   "dependencies": {
     "@canopy-iiif/app": "^1.11.1",
